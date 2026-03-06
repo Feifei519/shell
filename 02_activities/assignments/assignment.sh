@@ -33,7 +33,7 @@ unzip -q rawdata.zip
 # 1. Create a directory named data
 mkdir data
 # 2. Move the ./rawdata directory to ./data/raw (eg. move it into ./data and rename it to raw)
-mv -R ./raw/data ./data/raw
+mv ./rawdata ./data/raw
 # 3. List the contents of the ./data/raw directory
 ls ./data/raw
 # 4. Create the directory ./data/processed, 
@@ -53,7 +53,7 @@ cd ./data/processed/user_logs
 rm ipaddr/*
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 touch ./data/inventory.txt
-find ./data/processed/* > ./data/inventory.txt
+find ./data/processed -type f > ./data/inventory.txt
 
 ###########################################
 
